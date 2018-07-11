@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b829e0e-8bdc-4ae8-adf5-83c7e8c50e97" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library.iml" beforeDir="false" />
-    </list>
+    <list default="true" id="2b829e0e-8bdc-4ae8-adf5-83c7e8c50e97" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
