@@ -1,14 +1,18 @@
 package models;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "libraries")
 public class Library {
 
     private int id;
     private String name;
     private List<Book> books;
     private List<Borrower> borrowers;
+    private Book book;
 
     public Library() {
     }
@@ -19,6 +23,9 @@ public class Library {
         this.borrowers = new ArrayList<Borrower>();
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -27,6 +34,7 @@ public class Library {
         this.id = id;
     }
 
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -35,6 +43,7 @@ public class Library {
         this.name = name;
     }
 
+    @OneToMany(mappedBy = "book", fetch = FetchType.LAZY)
     public List<Book> getBooks() {
         return books;
     }
@@ -58,4 +67,6 @@ public class Library {
         book.setOnLoan(true);
         borrower.getBorrowed().add(book);
     }
+
+
 }
