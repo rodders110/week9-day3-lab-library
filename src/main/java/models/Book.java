@@ -9,11 +9,9 @@ public class Book {
     private boolean onLoan;
     private Borrower borrower;
 
-    public Book(String title, String author, boolean online, Borrower borrower) {
+    public Book(String title, String author) {
         this.title = title;
         this.author = author;
-        this.onLoan = online;
-        this.borrower = borrower;
     }
 
     public int getId() {
