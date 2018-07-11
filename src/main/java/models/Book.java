@@ -1,6 +1,10 @@
 package models;
 
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="books")
 public class Book {
 
     private int id;
@@ -8,12 +12,16 @@ public class Book {
     private String author;
     private boolean onLoan;
     private Borrower borrower;
+    private Library library;
 
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "id")
     public int getId() {
         return id;
     }
@@ -22,6 +30,7 @@ public class Book {
         this.id = id;
     }
 
+    @Column(name = "title")
     public String getTitle() {
         return title;
     }
@@ -30,6 +39,7 @@ public class Book {
         this.title = title;
     }
 
+    @Column(name = "author")
     public String getAuthor() {
         return author;
     }
@@ -52,5 +62,15 @@ public class Book {
 
     public void setBorrower(Borrower borrower) {
         this.borrower = borrower;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "Library_id", nullable = false)
+    public Library getLibrary() {
+        return library;
+    }
+
+    public void setLibrary(Library library) {
+        this.library = library;
     }
 }
