@@ -52,6 +52,8 @@ public class Library {
     }
 
     public void rentBook(Book book, Borrower borrower){
+        this.getBorrowers().add(borrower);
+        this.getBooks().add(book);
         book.setBorrower(borrower);
         book.setOnLoan(true);
         borrower.getBorrowed().add(book);

@@ -11,17 +11,17 @@ public class TestBook {
 
     @Before
     public void setUp() {
-        Book book = new Book("Lord of the rings","J. R. R. Tolkien");
+        book = new Book("Lord of the rings","J. R. R. Tolkien");
 
     }
 
     @Test
-    public void hasTitle({
+    public void hasTitle(){
         assertEquals("Lord of the rings",book.getTitle());
     }
 
     @Test
-    public void hasAuthor({
+    public void hasAuthor(){
         assertEquals("J. R. R. Tolkien", book.getAuthor());
     }
 }
