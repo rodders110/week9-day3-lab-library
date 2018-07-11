@@ -1,20 +1,21 @@
 package models;
 
-import java.awt.print.Book;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Borrower {
 
     private int id;
     private String name;
-    List<Book> borrowed = new ArrayList<Book>();
+    List<Book> borrowed;
 
     public Borrower() {
     }
 
     public Borrower(String name) {
         this.name = name;
-        this.borrowed = null;
+        this.borrowed = new ArrayList<Book>();
     }
 
     public int getId() {
