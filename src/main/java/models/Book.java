@@ -6,13 +6,13 @@ public class Book {
     private int id;
     private String title;
     private String author;
-    private boolean online;
+    private boolean onLoan;
     private Borrower borrower;
 
     public Book(String title, String author, boolean online, Borrower borrower) {
         this.title = title;
         this.author = author;
-        this.online = online;
+        this.onLoan = online;
         this.borrower = borrower;
     }
 
@@ -40,12 +40,12 @@ public class Book {
         this.author = author;
     }
 
-    public boolean isOnline() {
-        return online;
+    public boolean isOnLoan() {
+        return onLoan;
     }
 
-    public void setOnline(boolean online) {
-        this.online = online;
+    public void setOnLoan(boolean onLoan) {
+        this.onLoan = onLoan;
     }
 
     public Borrower getBorrower() {
